@@ -6,4 +6,5 @@
   <string name="error_retrieving_team">Error retrieving team</string>
   <string name="error_retrieving_member">Error retrieving member</string>
   <string name="error_team_name_empty">Team name cannot be empty</string>
+  <string name="contentDescription_teamMemberAvatar">Team member avatar</string>
 </resources>

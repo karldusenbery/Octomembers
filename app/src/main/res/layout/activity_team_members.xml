@@ -10,7 +10,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_margin="@dimen/padding_standard">
+    android:padding="@dimen/padding_standard"
+      android:background="@color/colorAccent">
 
 
     <EditText
