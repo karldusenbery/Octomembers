@@ -33,6 +33,7 @@
       android:layout_marginEnd="@dimen/padding_standard"
       android:textSize="@dimen/type_text_size"
       android:layout_alignBaseline="@id/teamMemberLogin"
+      android:gravity="end"
       android:text="TextView" />
 
 </RelativeLayout>
