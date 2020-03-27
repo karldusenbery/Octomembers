@@ -8,6 +8,9 @@
       android:id="@+id/teamMemberLogin"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:paddingStart="@dimen/padding_standard"
+      android:paddingEnd="@dimen/padding_standard"
+      android:textSize="@dimen/login_text_size"
       tools:text="login" />
 
 </RelativeLayout>
