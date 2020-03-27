@@ -1,13 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent"
-  tools:context="dev.dusenbery.octomembers.ui.member.MemberActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dev.dusenbery.octomembers.ui.member.MemberActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    >
 
-  <TextView
-    android:id="@+id/memberName"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+  <ImageView
+      android:layout_width="@dimen/detail_avatar_size"
+      android:layout_height="@dimen/detail_avatar_size"
+      android:id="@+id/memberAvatar"
+      android:contentDescription="@string/contentDescription_teamMemberAvatar"
+      tools:src="@drawable/ic_launcher_background">
+  </ImageView>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/member_info"
+        android:text="@string/label_name"></TextView>
+
+    <TextView
+        style="@style/member_info"
+        android:id="@+id/memberName"></TextView>
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/member_info"
+        android:text="@string/label_login"></TextView>
+
+    <TextView
+        style="@style/member_info"
+        android:id="@+id/memberLogin"></TextView>
+
+  </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/member_info"
+        android:text="@string/label_company"></TextView>
+
+    <TextView
+        style="@style/member_info"
+        android:id="@+id/memberCompany"></TextView>
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/member_info"
+        android:text="@string/label_email"></TextView>
+
+    <TextView
+        style="@style/member_info"
+        android:id="@+id/memberEmail"></TextView>
+
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <TextView
+        style="@style/member_info"
+        android:text="@string/label_type"></TextView>
+
+    <TextView
+        style="@style/member_info"
+        android:id="@+id/memberType"></TextView>
+
+  </LinearLayout>
+
 
 </LinearLayout>

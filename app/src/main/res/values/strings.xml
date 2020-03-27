@@ -7,4 +7,9 @@
   <string name="error_retrieving_member">Error retrieving member</string>
   <string name="error_team_name_empty">Team name cannot be empty</string>
   <string name="contentDescription_teamMemberAvatar">Team member avatar</string>
+  <string name="label_name">name:</string>
+  <string name="label_login">username:</string>
+  <string name="label_company">company:</string>
+  <string name="label_email">email:</string>
+  <string name="label_type">type:</string>
 </resources>
