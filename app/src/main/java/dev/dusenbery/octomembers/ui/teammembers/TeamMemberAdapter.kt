@@ -35,6 +35,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import dev.dusenbery.octomembers.R
 import dev.dusenbery.octomembers.model.Member
 import dev.dusenbery.octomembers.ui.member.MemberActivity
@@ -62,6 +63,8 @@ class TeamMemberAdapter(var members: List<Member>) : RecyclerView.Adapter<TeamMe
     fun bind(member: Member) {
       this.member = member
       itemView.teamMemberLogin.text = member.login
+      Picasso.get().load(member.avatarUrl).into(itemView.teamMemberAvatar)
+      itemView.teamMemberType.text = member.type
     }
 
     override fun onClick(view: View) {
