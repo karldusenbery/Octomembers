@@ -35,6 +35,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.squareup.picasso.Picasso
 import dev.dusenbery.octomembers.R
 import dev.dusenbery.octomembers.model.Member
 import dev.dusenbery.octomembers.repository.remote.RemoteRepository
@@ -77,7 +78,12 @@ class MemberActivity : AppCompatActivity(), MemberContract.View {
   private fun memberLoginFromIntent() = intent.getStringExtra(EXTRA_MEMBER_LOGIN)
 
   override fun showMember(member: Member) {
+    Picasso.get().load(member.avatarUrl).into(memberAvatar)
     memberName.text = member.name
+    memberLogin.text = member.login
+    memberCompany.text = member.company
+    memberEmail.text = member.email
+    memberType.text = member.type
   }
 
   override fun showErrorRetrievingMember() {
