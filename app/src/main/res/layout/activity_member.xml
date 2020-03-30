@@ -7,20 +7,34 @@
     android:orientation="vertical"
     tools:context="dev.dusenbery.octomembers.ui.member.MemberActivity">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/detail_avatar_container_size"
         android:background="@color/colorAccent"
-        android:gravity="center">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/memberAvatar"
             android:layout_width="@dimen/detail_avatar_size"
             android:layout_height="@dimen/detail_avatar_size"
             android:contentDescription="@string/contentDescription_teamMemberAvatar"
-            tools:src="@drawable/ic_launcher_background"></ImageView>
+            android:padding="@dimen/padding_standard"
+            tools:src="@drawable/ic_launcher_background"/>
 
-    </RelativeLayout>
+        <TextView
+            android:id="@+id/memberName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/padding_standard"
+            android:maxLines="3"
+            android:textSize="@dimen/detail_name_text"
+            tools:text="FirstName LastName"
+            />
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -36,25 +50,11 @@
 
             <TextView
                 style="@style/member_label"
-                android:text="@string/label_name"></TextView>
-
-            <TextView
-                android:id="@+id/memberName"
-                style="@style/member_info"></TextView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                style="@style/member_label"
-                android:text="@string/label_login"></TextView>
+                android:text="@string/label_login"/>
 
             <TextView
                 android:id="@+id/memberLogin"
-                style="@style/member_info"></TextView>
+                style="@style/member_info"/>
 
         </LinearLayout>
 
@@ -64,11 +64,11 @@
 
             <TextView
                 style="@style/member_label"
-                android:text="@string/label_company"></TextView>
+                android:text="@string/label_company"/>
 
             <TextView
                 android:id="@+id/memberCompany"
-                style="@style/member_info"></TextView>
+                style="@style/member_info"/>
 
         </LinearLayout>
 
@@ -78,11 +78,11 @@
 
             <TextView
                 style="@style/member_label"
-                android:text="@string/label_email"></TextView>
+                android:text="@string/label_email"/>
 
             <TextView
                 android:id="@+id/memberEmail"
-                style="@style/member_info"></TextView>
+                style="@style/member_info"/>
 
         </LinearLayout>
 
@@ -92,13 +92,14 @@
 
             <TextView
                 style="@style/member_label"
-                android:text="@string/label_type"></TextView>
+                android:text="@string/label_type"/>
 
             <TextView
                 android:id="@+id/memberType"
-                style="@style/member_info"></TextView>
+                style="@style/member_info"/>
 
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
