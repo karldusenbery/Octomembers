@@ -43,6 +43,9 @@ interface TeamMembersContract {
     fun hideLoading()
     fun disableInput()
     fun enableInput()
+    fun showEmptyState()
+    fun hideEmptyState()
+    fun hideMembers()
   }
 
   interface Presenter {

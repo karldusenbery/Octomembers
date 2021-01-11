@@ -69,6 +69,7 @@ class TeamMembersActivity : AppCompatActivity(), TeamMembersContract.View {
   override fun showMembers(members: List<Member>) {
     adapter.members = members
     adapter.notifyDataSetChanged()
+    teamMembersList.visibility = View.VISIBLE
   }
 
   override fun showErrorRetrievingMembers() {
@@ -82,12 +83,10 @@ class TeamMembersActivity : AppCompatActivity(), TeamMembersContract.View {
 
   override fun showLoading() {
     loadingIndicator.visibility = View.VISIBLE
-    teamMembersList.visibility = View.INVISIBLE
   }
 
   override fun hideLoading() {
     loadingIndicator.visibility = View.GONE
-    teamMembersList.visibility = View.VISIBLE
   }
 
   override fun disableInput() {
@@ -96,5 +95,19 @@ class TeamMembersActivity : AppCompatActivity(), TeamMembersContract.View {
 
   override fun enableInput() {
     showMembers.isEnabled = true
+  }
+
+  override fun showEmptyState() {
+    emptyState.visibility = View.VISIBLE
+    emptyState.text = String.format(getString(R.string.empty_state_format), teamName.text.toString())
+
+  }
+
+  override fun hideEmptyState() {
+    emptyState.visibility = View.INVISIBLE
+  }
+
+  override fun hideMembers() {
+    teamMembersList.visibility = View.INVISIBLE
   }
 }
